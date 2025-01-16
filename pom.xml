@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project 
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>uk.ac.soton.comp6203.group17</groupId>
+  <artifactId>coursework</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>coursework</name>
+  <url>https://git.soton.ac.uk/comp6203-group-17/coursework</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+  
+    <dependency>
+      <groupId>nl.tudelft.ii</groupId>
+      <artifactId>genius</artifactId>
+      <version>10.4</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/genius-10.4.jar</systemPath>
+    </dependency>
+  
+    <!-- Do NOT incorporate SLF4J in the final agent code! -->
+    
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.4.14</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+    </dependency>
+   
+    <!-- ================================================= -->
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+	  
+    <resources>
+
+      <resource>
+        <directory>${basedir}/src/main/java</directory>
+      </resource>
+
+       <resource>
+        <directory>${basedir}/src/main/resources</directory>
+      </resource>
+
+    </resources>
+    
+    <plugins>
+		
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+    	  
+  </build>
+
+
+</project>

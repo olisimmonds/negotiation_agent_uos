@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<multilateralTournamentsConfiguration>
+	<tournaments>
+		<tournament>
+			<deadline>
+				<value>200</value>
+				<type>ROUND</type>
+			</deadline>
+			<protocolItem hasMediatorProfile="false" hasMediator="false"
+						  description="Each agents makes offer, counter-offer, or accepts"
+						  classPath="genius.core.protocol.StackedAlternatingOffersProtocol"
+						  protocolName="Stacked Alternating Offers Protocol"/>
+			<partyRepItems>
+				<party classPath="agents.anac.y2016.agentlight.AgentLight">
+					<properties />
+				</party>
+				<party classPath="agents.anac.y2016.atlas3.Atlas32016">
+					<properties />
+				</party>
+				<party classPath="agents.anac.y2016.caduceus.Caduceus">
+					<properties />
+				</party>
+				<party classPath="group17.Agent17">
+					<properties />
+				</party>
+			</partyRepItems>
+			<partyProfileItems>
+				<item url="file:etc/templates/ANAC2015/group5-car_domain/car-Profile1.xml" />
+				<item url="file:etc/templates/ANAC2015/group5-car_domain/car-Profile2.xml" />
+			</partyProfileItems>
+			<repeats>1</repeats>
+			<numberOfPartiesPerSession>2</numberOfPartiesPerSession>
+			<repetitionAllowed>false</repetitionAllowed>
+			<persistentDataType>DISABLED</persistentDataType>
+		</tournament>
+	</tournaments>
+</multilateralTournamentsConfiguration>

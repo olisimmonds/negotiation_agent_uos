@@ -1,0 +1,2 @@
+Open source libraries used: SLF4J 2.0.9, LogBack 1.4.14
+Opponent modelling builds upon the "Jonny Black" algorithm from Lab 3.
